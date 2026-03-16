@@ -1,0 +1,45 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* ============================================================
+   Appatinhas — Global Styles
+   Design System: "Soft-Tech" (Ver STYLEGUIDE.md)
+   ============================================================ */
+
+@layer base {
+  :root {
+    --color-primary: #1B3737;
+    --color-accent: #FF6B35;
+    --color-background: #F9F8F6;
+    --color-surface: #FFFFFF;
+  }
+
+  html {
+    font-family: 'Inter', system-ui, -apple-system, sans-serif;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+  }
+
+  body {
+    @apply bg-background text-primary;
+  }
+
+  * {
+    @apply border-border;
+  }
+}
+
+@layer utilities {
+  /* Shadow suave para cards conforme Styleguide */
+  .shadow-soft {
+    box-shadow: 0 4px 6px -1px rgba(27, 55, 55, 0.05);
+  }
+
+  /* Micro-interações padrão do Styleguide */
+  .btn-interaction {
+    @apply hover:scale-[1.02] active:scale-[0.98] transition-all duration-300 ease-in-out;
+  }
+}
